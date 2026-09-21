@@ -1,0 +1,42 @@
+/* icons.css — ÍCONES SVG
+   Todos os ícones usam `currentColor` e stroke, então herdam a cor
+   do texto onde estão. Um único ponto para ajustar tamanho/traço. */
+.icon {
+  width: 22px; height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+/* Ícone dentro de botão fica alinhado ao texto */
+.btn .icon { width: 20px; height: 20px; vertical-align: -.25em; }
+.btn .icon:first-child { margin-right: .5rem; }
+.btn .icon:last-child  { margin-left: .5rem; }
+
+/* Ícone das provas de confiança */
+.trust__icon {
+  display: inline-grid; place-items: center;
+  width: 42px; height: 42px;
+  color: var(--cor-primaria);
+  background: var(--cor-branco);
+  border-radius: 12px;
+}
+.trust__icon .icon { width: 24px; height: 24px; }
+
+/* Ícone circular das métricas de impacto */
+.stat__icon {
+  display: inline-grid; place-items: center;
+  width: 60px; height: 60px;
+  margin: 0 auto var(--espaco-1);
+  color: var(--cor-primaria);
+  background: var(--cor-areia);
+  border-radius: 50%;
+}
+.stat__icon .icon { width: 28px; height: 28px; stroke-width: 1.6; }
+
+/* Contato do rodapé */
+.footer__contact { display: flex; flex-direction: column; gap: .5rem; }
+.footer__contact-item { display: flex; align-items: center; gap: .5rem; font-size: .9rem; }

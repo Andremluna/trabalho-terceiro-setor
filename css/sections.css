@@ -1,0 +1,54 @@
+/* sections.css — SEÇÕES DE CONTEÚDO
+   (confiança, impacto, doação, depoimento, faq) */
+
+/* Base de seção */
+.section { padding-block: var(--espaco-5); }
+.section--sand { background: var(--cor-areia); }
+.section__title { font-size: clamp(1.6rem, 4vw, 2.2rem); text-align: center; }
+.section__lead { text-align: center; color: var(--cor-texto-suave); margin-top: var(--espaco-1); margin-bottom: var(--espaco-4); }
+
+/* Provas de confiança */
+.trust { background: var(--cor-areia-escura); }
+.trust__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espaco-3);
+  padding-block: var(--espaco-3);
+}
+.trust__item { display: flex; gap: var(--espaco-2); align-items: flex-start; font-size: .95rem; color: var(--cor-texto-suave); }
+.trust__item strong { display: block; color: var(--cor-texto); }
+
+/* Impacto — números */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--espaco-3); }
+.stat { text-align: center; }
+.stat__number { display: block; font-size: 2.6rem; font-weight: 800; color: var(--cor-primaria); }
+.stat__label { font-size: .9rem; color: var(--cor-texto-suave); }
+
+/* Doação — abas + cards */
+.tabs { display: flex; justify-content: center; gap: var(--espaco-1); margin-bottom: var(--espaco-4); }
+.tabs__btn {
+  padding: .6rem 1.4rem; border: 2px solid var(--cor-primaria);
+  background: transparent; color: var(--cor-primaria);
+  border-radius: 999px; font-weight: 700; cursor: pointer;
+}
+.tabs__btn.is-active { background: var(--cor-primaria); color: #fff; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espaco-3); }
+.cards.is-hidden { display: none; }
+
+/* Depoimento */
+.quote { max-width: 720px; margin-inline: auto; text-align: center; }
+.quote__text { font-size: 1.4rem; font-style: italic; line-height: 1.5; }
+.quote__author { margin-top: var(--espaco-2); color: var(--cor-texto-suave); font-weight: 700; }
+
+/* FAQ */
+.faq { display: flex; flex-direction: column; gap: var(--espaco-2); }
+.faq__item {
+  background: var(--cor-branco); border: 1px solid var(--cor-areia-escura);
+  border-radius: var(--raio); padding: var(--espaco-2) var(--espaco-3);
+}
+.faq__q { font-weight: 700; cursor: pointer; }
+.faq__a { color: var(--cor-texto-suave); margin-top: var(--espaco-1); }
+
+/* Responsivo */
+@media (max-width: 760px) {
+  .trust__grid, .stats, .cards { grid-template-columns: 1fr; }
+}

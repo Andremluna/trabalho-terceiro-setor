@@ -1,0 +1,13 @@
+/* footer.css — RODAPÉ */
+.footer { background: var(--cor-texto); color: #e9dfd3; padding-block: var(--espaco-4); }
+.footer__inner {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espaco-3);
+  align-items: start;
+}
+.footer__brand { font-size: 1.1rem; color: var(--cor-branco); }
+.footer__text { font-size: .9rem; opacity: .85; margin-top: var(--espaco-1); }
+.footer__links { display: flex; flex-direction: column; gap: .4rem; font-size: .9rem; }
+.footer__links a:hover { color: var(--cor-primaria); }
+.footer__copy { text-align: center; font-size: .8rem; opacity: .6; margin-top: var(--espaco-3); }
+
+@media (max-width: 760px) { .footer__inner { grid-template-columns: 1fr; } }

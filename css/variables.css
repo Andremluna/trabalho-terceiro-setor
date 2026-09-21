@@ -1,0 +1,29 @@
+/* variables.css — DESIGN TOKENS
+   Valores centrais reutilizados em todo o projeto.
+   Mudou aqui, muda no site inteiro. */
+:root {
+  /* Cores — paleta do sertão */
+  --cor-primaria: #d97706;   /* âmbar/terracota */
+  --cor-primaria-escura: #b45309;
+  --cor-acento: #2f9e44;     /* verde da horta */
+  --cor-texto: #2b2119;
+  --cor-texto-suave: #6b5d4f;
+  --cor-areia: #faf3e8;
+  --cor-areia-escura: #f2e6d2;
+  --cor-branco: #ffffff;
+
+  /* Tipografia */
+  --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Espaçamento (escala) */
+  --espaco-1: .5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2.5rem;
+  --espaco-5: 4rem;
+
+  /* Outros */
+  --raio: 14px;
+  --sombra: 0 10px 30px rgba(43, 33, 25, .08);
+  --largura-max: 1080px;
+}

@@ -1,0 +1,24 @@
+/* base.css — RESET + TIPOGRAFIA
+   Zera comportamentos padrão do navegador e define a base do texto. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fonte-base);
+  color: var(--cor-texto);
+  background: var(--cor-branco);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* Container — centraliza e limita a largura do conteúdo */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding-inline: var(--espaco-3);
+}
+.container--narrow { max-width: 720px; }

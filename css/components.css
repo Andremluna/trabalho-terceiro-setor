@@ -1,0 +1,47 @@
+/* components.css — COMPONENTES REUTILIZÁVEIS
+   Escritos com metodologia BEM (Bloco__Elemento--Modificador). */
+
+/* --- Botão --- */
+.btn {
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .15s, background .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--cor-primaria); color: var(--cor-branco); }
+.btn--primary:hover { background: var(--cor-primaria-escura); }
+.btn--ghost { background: transparent; color: var(--cor-branco); border-color: var(--cor-branco); }
+.btn--sm { padding: .5rem 1.1rem; font-size: .9rem; }
+.btn--block { display: block; text-align: center; width: 100%; }
+
+/* --- Badge (etiqueta) --- */
+.badge {
+  display: inline-block;
+  padding: .3rem .9rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.badge--light { background: rgba(255,255,255,.2); color: var(--cor-branco); }
+.badge--accent { background: var(--cor-acento); color: var(--cor-branco); }
+
+/* --- Card --- */
+.card {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-areia-escura);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+.card--featured { border-color: var(--cor-primaria); border-width: 2px; }
+.card__price { font-size: 2rem; font-weight: 800; color: var(--cor-primaria); }
+.card__price small { font-size: 1rem; color: var(--cor-texto-suave); font-weight: 600; }
+.card__text { color: var(--cor-texto-suave); flex: 1; }

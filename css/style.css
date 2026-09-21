@@ -1,0 +1,15 @@
+/* =========================================================
+   style.css  —  ARQUIVO PRINCIPAL (orquestrador)
+   Não escreve estilos: só importa os módulos na ordem certa.
+   Isto é MODULARIZAR o CSS: dividir em partes pequenas,
+   independentes e reutilizáveis em vez de um arquivo gigante.
+   ========================================================= */
+
+@import "variables.css";   /* 1. Design tokens (cores, fontes, espaços) */
+@import "base.css";        /* 2. Reset + tipografia base                */
+@import "components.css";  /* 3. Componentes reutilizáveis (btn, card)  */
+@import "icons.css";       /* 3.1 Ícones SVG                            */
+@import "header.css";      /* 4. Cabeçalho e navegação                  */
+@import "hero.css";        /* 5. Seção de destaque                      */
+@import "sections.css";    /* 6. Seções de conteúdo                     */
+@import "footer.css";      /* 7. Rodapé                                 */

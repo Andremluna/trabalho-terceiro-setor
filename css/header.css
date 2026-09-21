@@ -1,0 +1,34 @@
+/* header.css — CABEÇALHO E NAVEGAÇÃO */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--cor-branco);
+  border-bottom: 1px solid var(--cor-areia-escura);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--espaco-2);
+}
+.header__logo { font-weight: 800; font-size: 1.3rem; color: var(--cor-primaria); letter-spacing: -.02em; }
+.header__toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+.nav { display: flex; align-items: center; gap: var(--espaco-3); }
+.nav__link { color: var(--cor-texto-suave); font-weight: 600; }
+.nav__link:hover { color: var(--cor-primaria); }
+
+/* Responsivo — menu vira coluna no celular */
+@media (max-width: 760px) {
+  .header__toggle { display: block; }
+  .nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch;
+    background: var(--cor-branco);
+    padding: var(--espaco-3);
+    border-bottom: 1px solid var(--cor-areia-escura);
+  }
+  .nav.is-open { display: flex; }
+}

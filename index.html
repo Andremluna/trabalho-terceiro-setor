@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Sertão Vivo — Água, alimento e futuro no sertão</title>
+
+  <!--
+    MODULARIZAÇÃO DO CSS:
+    Um único arquivo (style.css) importa todos os módulos com @import.
+    Cada parte da página tem seu próprio arquivo de estilo.
+  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#topo" class="header__logo">
+        Sertão Vivo
+      </a>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+      <nav class="nav" id="nav">
+        <a href="#impacto" class="nav__link">Impacto</a>
+        <a href="#doar" class="nav__link">Como ajudar</a>
+        <a href="#historia" class="nav__link">Histórias</a>
+        <a href="#faq" class="nav__link">Dúvidas</a>
+        <a href="#doar" class="btn btn--primary btn--sm">Doar agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="badge badge--light">Há 8 anos transformando o sertão</span>
+      <h1 class="hero__title">Água, alimento e futuro em Serra Branca</h1>
+      <p class="hero__subtitle">
+        Impulsionamos o desenvolvimento sustentável no sertão de Pernambuco.
+        Juntos, levamos dignidade e oportunidades onde a água é rara.
+      </p>
+      <div class="hero__actions">
+        <a href="#doar" class="btn btn--primary"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.2-8.2A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.2 5.8C19 15.7 12 20 12 20z"/></svg>Fazer doação via Pix</a>
+        <a href="#impacto" class="btn btn--ghost">Ver nosso impacto<svg class="icon" viewBox="0 0 24 24"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROVAS DE CONFIANÇA ============ -->
+  <section class="trust">
+    <div class="container trust__grid">
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><strong>100% auditado</strong> Prestação de contas trimestral e pública.</div></div>
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg></span><div><strong>Selo Amigo do Sertão</strong> Reconhecidos por transparência e impacto.</div></div>
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12v5M12 9v8M15 14v3"/></svg></span><div><strong>Relatório anual</strong> Balanço social e financeiro aberto.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACTO ============ -->
+  <section class="section" id="impacto">
+    <div class="container">
+      <h2 class="section__title">O impacto que você ajuda a gerar</h2>
+      <p class="section__lead">Resultados reais na comunidade de Serra Branca (PE).</p>
+
+      <div class="stats">
+        <article class="stat">
+          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 10a6 6 0 0 1-12 0c0-3 3-6 6-10z"/></svg></span>
+          <span class="stat__number" data-target="180">180</span>
+          <span class="stat__label">Cisternas instaladas — água potável para 600 famílias</span>
+        </article>
+        <article class="stat">
+          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-3 2.2-5.2 5.2-5.2C17.2 9.8 15 12 12 12z"/><path d="M12 14.5C12 12 9.8 10 6.8 10 6.8 12.5 9 14.5 12 14.5z"/></svg></span>
+          <span class="stat__number" data-target="90">90</span>
+          <span class="stat__label">Mulheres agricultoras em hortas comunitárias</span>
+        </article>
+        <article class="stat">
+          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4L2 9z"/><path d="M6 11v4c0 1.3 2.7 2.3 6 2.3s6-1 6-2.3v-4"/></svg></span>
+          <span class="stat__number" data-target="400">400</span>
+          <span class="stat__label">Jovens capacitados no Centro Sertão Digital</span>
+        </article>
+        <article class="stat">
+          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z"/></svg></span>
+          <span class="stat__number" data-target="1200">1.200</span>
+          <span class="stat__label">Filtros ecológicos de barro distribuídos</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOAÇÃO ============ -->
+  <section class="section section--sand" id="doar">
+    <div class="container">
+      <h2 class="section__title">Escolha como ajudar</h2>
+      <p class="section__lead">Cada valor tem um impacto direto e mensurável.</p>
+
+      <div class="tabs" id="donationTabs">
+        <button class="tabs__btn is-active" data-tab="mensal">Doação mensal</button>
+        <button class="tabs__btn" data-tab="pontual">Doação única</button>
+      </div>
+
+      <!-- Painel: Mensal -->
+      <div class="cards" data-panel="mensal">
+        <article class="card">
+          <span class="card__price">R$ 30<small>/mês</small></span>
+          <p class="card__text">Água limpa e filtro para 1 família por mês.</p>
+          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+        </article>
+        <article class="card card--featured">
+          <span class="badge badge--accent">Mais escolhido</span>
+          <span class="card__price">R$ 60<small>/mês</small></span>
+          <p class="card__text">Alimento e material escolar para 2 crianças.</p>
+          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+        </article>
+        <article class="card">
+          <span class="card__price">R$ 100<small>/mês</small></span>
+          <p class="card__text">Insumos para a horta comunitária das mulheres.</p>
+          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+        </article>
+      </div>
+
+      <!-- Painel: Pontual (oculto por padrão) -->
+      <div class="cards is-hidden" data-panel="pontual">
+        <article class="card">
+          <span class="card__price">R$ 50</span>
+          <p class="card__text">1 cesta básica da agricultura familiar local.</p>
+          <a href="#" class="btn btn--primary btn--block">Doar</a>
+        </article>
+        <article class="card">
+          <span class="card__price">R$ 250</span>
+          <p class="card__text">Manutenção completa de uma cisterna comunitária.</p>
+          <a href="#" class="btn btn--primary btn--block">Doar</a>
+        </article>
+        <article class="card">
+          <span class="card__price">Outro</span>
+          <p class="card__text">Escolha quanto deseja doar hoje.</p>
+          <a href="#" class="btn btn--primary btn--block">Escolher valor</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HISTÓRIA / DEPOIMENTO ============ -->
+  <section class="section" id="historia">
+    <div class="container">
+      <blockquote class="quote">
+        <p class="quote__text">
+          “Antes do projeto, a gente andava horas debaixo do sol para buscar água turva.
+          Hoje, com a cisterna no quintal e a horta, minhas filhas bebem água limpa e
+          eu vendo nossa produção na feira.”
+        </p>
+        <footer class="quote__author">— Dona Severina, agricultora em Serra Branca (PE)</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--sand" id="faq">
+    <div class="container container--narrow">
+      <h2 class="section__title">Dúvidas frequentes</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__q">Minha doação é segura?</summary>
+          <p class="faq__a">Sim. Usamos ambiente criptografado para cartão, boleto ou Pix.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Como acompanho o uso do meu dinheiro?</summary>
+          <p class="faq__a">Enviamos relatórios mensais por e-mail com fotos, vídeos e prestação de contas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong class="footer__brand">Instituto Sertão Vivo</strong>
+        <p class="footer__text">Comunidade de Serra Branca, sertão de Pernambuco (PE)</p>
+      </div>
+      <div class="footer__contact">
+        <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contato@sertaovivo.org.br</span>
+        <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.5-2.2 1.4a12 12 0 0 0 5 5l1.4-2.2L19 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>WhatsApp (81) 99999-0000</span>
+      </div>
+      <nav class="footer__links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">Relatórios financeiros</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© 2026 Instituto Sertão Vivo — Projeto fictício para fins acadêmicos.</p>
+  </footer>
+
+  <!-- MODULARIZAÇÃO DO JS: cada módulo em seu arquivo; main.js orquestra.
+       Scripts clássicos funcionam até abrindo o arquivo direto (file://). -->
+  <script src="js/modules/menu.js"></script>
+  <script src="js/modules/counter.js"></script>
+  <script src="js/modules/donation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
