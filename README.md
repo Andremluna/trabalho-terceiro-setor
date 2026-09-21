@@ -41,4 +41,4 @@ ou rode um servidor local:
 e abra http://localhost:8000
 
 Os ícones são SVG inline (sem biblioteca externa), e os números de impacto
-já aparecem corretos mesmo se o JS não rodar — o JS só adiciona a animação.
+já aparecem corretos mesmo se o JS não rodar o JS só adiciona a animação.
