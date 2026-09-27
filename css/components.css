@@ -45,3 +45,50 @@
 .card__price { font-size: 2rem; font-weight: 800; color: var(--cor-primaria); }
 .card__price small { font-size: 1rem; color: var(--cor-texto-suave); font-weight: 600; }
 .card__text { color: var(--cor-texto-suave); flex: 1; }
+
+/* --- Botão de impacto --- */
+
+.botao-impacto {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 12px 20px;
+    background-color: #e8892d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* --- Seta mostrando detalhes como ajudar --- */
+.doacao-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.doacao-info summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    border: 1px solid #e8892d;
+    border-radius: 50%;
+    color: #e8892d;
+    transition: 0.2s;
+}
+
+.doacao-info summary::-webkit-details-marker {
+    display: none;
+}
+
+.doacao-info summary:hover {
+    background-color: #e8892d;
+    color: white;
+}
+
+.doacao-info p {
+    max-width: 600px;
+    margin: 15px auto;
+}
