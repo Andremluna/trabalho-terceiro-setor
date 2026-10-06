@@ -56,39 +56,119 @@
     background-color: #e8892d;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 25px;
 }
 
-/* --- Seta mostrando detalhes como ajudar --- */
+/* --- Caixa de informações --- */
+
 .doacao-info {
-    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
     margin: 20px 0;
 }
 
-.doacao-info summary {
-    list-style: none;
-    cursor: pointer;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 auto;
-    border: 1px solid #e8892d;
+.info-icon {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e8892d;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #e8892d;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.info-tooltip {
+    position: absolute;
+    bottom: 40px;
+    width: 280px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    visibility: hidden;
     transition: 0.2s;
 }
 
-.doacao-info summary::-webkit-details-marker {
-    display: none;
+.info-icon:hover + .info-tooltip {
+    opacity: 1;
+    visibility: visible;
 }
 
-.doacao-info summary:hover {
-    background-color: #e8892d;
+
+/* --- Carrossel de imagens --- */
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-img {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+
+    margin: 0;
+}
+
+.carrossel-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    transition: 0.2s;
 }
 
-.doacao-info p {
-    max-width: 600px;
-    margin: 15px auto;
+.carrossel-seta:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carrossel-seta.esquerda {
+    left: 5%;
+}
+
+.carrossel-seta.direita {
+    right: 5%;
 }
