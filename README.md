@@ -1,6 +1,5 @@
 # Instituto Sertão Vivo — Terceiro Setor
-Landing page fictícia (ONG) para a aula de CSS e Identidade Visual.
-Tema do exit ticket: **Modularização**.
+Landing page fictícia (ONG) para a aula de HTML, CSS e Identidade Visual.
 
 ## Como modularizamos (o que explicar ao professor)
 
@@ -41,4 +40,4 @@ ou rode um servidor local:
 e abra http://localhost:8000
 
 Os ícones são SVG inline (sem biblioteca externa), e os números de impacto
-já aparecem corretos mesmo se o JS não rodar — o JS só adiciona a animação.
+já aparecem corretos mesmo se o JS não rodar o JS só adiciona a animação.
