@@ -7,4 +7,5 @@ document.addEventListener("DOMContentLoaded", function () {
   iniciarMenu();
   iniciarContadores();
   iniciarDoacao();
+  iniciarDepoimentos();
 });
