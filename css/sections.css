@@ -35,9 +35,32 @@
 .cards.is-hidden { display: none; }
 
 /* Depoimento */
-.quote { max-width: 720px; margin-inline: auto; text-align: center; }
+.quote { max-width: 720px; margin-inline: auto; text-align: center;}
 .quote__text { font-size: 1.4rem; font-style: italic; line-height: 1.5; }
 .quote__author { margin-top: var(--espaco-2); color: var(--cor-texto-suave); font-weight: 700; }
+
+/* Depoimentos — carrossel de falas (setas + texto) */
+.depoimentos {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--espaco-3);
+  max-width: var(--largura-max); margin-inline: auto;
+  padding: var(--espaco-5) var(--espaco-3);
+}
+.depoimento {
+  flex: 1; max-width: 720px; min-height: 9rem; /* evita o layout "pular" entre falas de tamanhos diferentes */
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: center;
+}
+.depoimento p { font-size: 1.4rem; font-style: italic; line-height: 1.5; }
+.depoimento h4 { margin-top: var(--espaco-2); color: var(--cor-texto-suave); font-weight: 700; }
+.seta {
+  flex-shrink: 0; width: 45px; height: 45px;
+  border: none; border-radius: 50%;
+  background: var(--cor-primaria); color: var(--cor-branco);
+  font-size: 1.2rem; cursor: pointer; transition: background .2s;
+}
+.seta:hover { background: var(--cor-primaria-escura); }
+.seta:focus-visible { outline: 3px solid var(--cor-texto); outline-offset: 2px; }
 
 /* FAQ */
 .faq { display: flex; flex-direction: column; gap: var(--espaco-2); }
@@ -51,4 +74,7 @@
 /* Responsivo */
 @media (max-width: 760px) {
   .trust__grid, .stats, .cards { grid-template-columns: 1fr; }
+  .depoimentos { gap: var(--espaco-1); padding-inline: var(--espaco-2); }
+  .depoimento p { font-size: 1.1rem; }
+  .seta { width: 38px; height: 38px; }
 }

@@ -72,8 +72,6 @@
 
     <button class="carrossel-seta direita">&#10095;</button>
 </div>
-```
-
 
   <!-- ============ IMPACTO ============ -->
   <section class="section" id="impacto">
@@ -177,7 +175,7 @@
   </section>
 
   <!-- ============ HISTÓRIA / DEPOIMENTO ============ -->
-  <section class="section" id="historia">
+  <!-- <section class="section" id="historia">
     <div class="container">
       <blockquote class="quote">
         <p class="quote__text">
@@ -188,7 +186,19 @@
         <footer class="quote__author">— Dona Severina, agricultora em Serra Branca (PE)</footer>
       </blockquote>
     </div>
-  </section>
+  </section> -->
+  <section class="depoimentos" id="historia">
+    <button class="seta esquerda" id="btnAnterior" aria-label="Depoimento anterior">
+        &#10094;
+    </button>
+    <div class="depoimento">
+        <p id="fala"></p>
+        <h4 id="autor"></h4>
+    </div>
+    <button class="seta direita" id="btnProximo" aria-label="Próximo depoimento">
+        &#10095;
+    </button>
+</section>
 
   <!-- ============ FAQ ============ -->
   <section class="section section--sand" id="faq">
@@ -232,6 +242,7 @@
   <script src="js/modules/menu.js"></script>
   <script src="js/modules/counter.js"></script>
   <script src="js/modules/donation.js"></script>
+  <script src="js/modules/message.js"></script>
   <script src="js/main.js"></script>
   <script src="js/imagens.js"></script>
 </body>
