@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Sertão Vivo — Água, alimento e futuro no sertão</title>
 
+  <!-- ============ INÍCIO DO TÓPICO 3: SEO E REDES SOCIAIS (FICTÍCIO) ============ -->
+  <!-- Meta tags descritivas para SEO -->
+  <meta name="description" content="Instituto Sertão Vivo: Há 8 anos transformando o sertão de Pernambuco através de água potável, hortas comunitárias e educação digital em Serra Branca." />
+  <meta name="keywords" content="ong, sertão, pernambuco, doação, água, sustentabilidade, serra branca, instituto sertão vivo" />
+  <meta name="author" content="Instituto Sertão Vivo" />
+
+  <!-- Favicon para a aba do navegador -->
+  <link rel="icon" type="image/png" href="images/favicon-ficticio.png" />
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="Instituto Sertão Vivo — Água, alimento e futuro no sertão" />
+  <meta property="og:description" content="Impulsionamos o desenvolvimento sustentável em Serra Branca (PE). Juntos, levamos dignidade onde a água é rara." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sertaovivo-ficticio.org.br" />
+  <meta property="og:image" content="https://www.sertaovivo-ficticio.org.br/images/compartilhamento-social.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Cards (Twitter / X) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instituto Sertão Vivo — Água, alimento e futuro no sertão" />
+  <meta name="twitter:description" content="Conheça nosso impacto em Serra Branca (PE) e ajude a transformar vidas no sertão." />
+  <meta name="twitter:image" content="https://www.sertaovivo-ficticio.org.br" />
+  <!-- ============ FIM DO TÓPICO 3 ============ -->
+
   <!--
     MODULARIZAÇÃO DO CSS:
     Um único arquivo (style.css) importa todos os módulos com @import.
@@ -21,7 +45,8 @@
         Sertão Vivo
       </a>
 
-      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+      <!-- Atualizado com aria-expanded para acessibilidade (A11y) -->
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
 
       <nav class="nav" id="nav">
         <a href="#impacto" class="nav__link">Impacto</a>
@@ -43,7 +68,7 @@
         Juntos, levamos dignidade e oportunidades onde a água é rara.
       </p>
       <div class="hero__actions">
-        <a href="#doar" class="btn btn--primary"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.2-8.2A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.2 5.8C19 15.7 12 20 12 20z"/></svg>Fazer doação via Pix</a>
+        <a href="#doar" class="btn btn--primary pix-trigger"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.2-8.2A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.2 5.8C19 15.7 12 20 12 20z"/></svg>Fazer doação via Pix</a>
         <a href="#impacto" class="btn btn--ghost">Ver nosso impacto<svg class="icon" viewBox="0 0 24 24"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
@@ -138,18 +163,18 @@
         <article class="card">
           <span class="card__price">R$ 30<small>/mês</small></span>
           <p class="card__text">Água limpa e filtro para 1 família por mês.</p>
-          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
         </article>
         <article class="card card--featured">
           <span class="badge badge--accent">Mais escolhido</span>
           <span class="card__price">R$ 60<small>/mês</small></span>
           <p class="card__text">Alimento e material escolar para 2 crianças.</p>
-          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
         </article>
         <article class="card">
           <span class="card__price">R$ 100<small>/mês</small></span>
           <p class="card__text">Insumos para a horta comunitária das mulheres.</p>
-          <a href="#" class="btn btn--primary btn--block">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
         </article>
       </div>
 
@@ -158,17 +183,17 @@
         <article class="card">
           <span class="card__price">R$ 50</span>
           <p class="card__text">1 cesta básica da agricultura familiar local.</p>
-          <a href="#" class="btn btn--primary btn--block">Doar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Doar</a>
         </article>
         <article class="card">
           <span class="card__price">R$ 250</span>
           <p class="card__text">Manutenção completa de uma cisterna comunitária.</p>
-          <a href="#" class="btn btn--primary btn--block">Doar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Doar</a>
         </article>
         <article class="card">
           <span class="card__price">Outro</span>
           <p class="card__text">Escolha quanto deseja doar hoje.</p>
-          <a href="#" class="btn btn--primary btn--block">Escolher valor</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger">Escolher valor</a>
         </article>
       </div>
     </div>
@@ -184,7 +209,7 @@
           eu vendo nossa produção na feira.”
         </p>
         <footer class="quote__author">— Dona Severina, agricultora em Serra Branca (PE)</footer>
-      </blockquote>
+    </blockquote>
     </div>
   </section> -->
   <section class="depoimentos" id="historia">
@@ -217,6 +242,18 @@
     </div>
   </section>
 
+  <!-- ============ NEWSLETTER / BOLETIM ============ -->
+  <section class="section" id="newsletter">
+    <div class="container container--narrow" style="text-align: center;">
+      <h2 class="section__title">Receba nosso boletim de impacto</h2>
+      <p class="section__lead">Acompanhe mensalmente as novidades e o desenvolvimento da sede em Serra Branca diretamente no seu e-mail.</p>
+      <form id="newsletterForm" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+        <input type="email" placeholder="Seu melhor e-mail" required style="padding: 12px 16px; border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 260px; max-width: 400px;" />
+        <button type="submit" class="btn btn--primary">Inscrever-se</button>
+      </form>
+    </div>
+  </section>
+
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -237,8 +274,21 @@
     <p class="footer__copy">© 2026 Instituto Sertão Vivo — Projeto fictício para fins acadêmicos.</p>
   </footer>
 
+  <!-- ============ NOVO: BOTÃO FLUTUANTE VOLTAR AO TOPO ============ -->
+  <a href="#topo" id="backToTop" aria-label="Voltar ao topo" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: var(--color-primary, #0077cc); color: #fff; padding: 10px 14px; border-radius: 50%; text-decoration: none; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">↑</a>
+
+  <!-- ============ NOVO: MODAL PIX (POPUP) ============ -->
+  <div id="pixModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center;">
+    <div style="background: #fff; padding: 30px; border-radius: 8px; max-width: 400px; width: 90%; text-align: center; position: relative;">
+      <h3 style="margin-bottom: 15px;">Doação via Pix — Sertão Vivo</h3>
+      <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Utilize a chave Pix abaixo (CNPJ fictício) ou escaneie no aplicativo do seu banco:</p>
+      <div style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-weight: bold; margin-bottom: 20px; font-size: 14px;">12.345.678/0001-99</div>
+      <button id="closePixModal" class="btn btn--primary" style="padding: 8px 16px;">Fechar</button>
+    </div>
+  </div>
+
   <!-- MODULARIZAÇÃO DO JS: cada módulo em seu arquivo; main.js orquestra.
-       Scripts clássicos funcionam até abrindo o arquivo direto (file://). -->
+        Scripts clássicos funcionam até abrindo o arquivo direto (file://). -->
   <script src="js/modules/menu.js"></script>
   <script src="js/modules/counter.js"></script>
   <script src="js/modules/donation.js"></script>
