@@ -3,17 +3,19 @@
    Mudou aqui, muda no site inteiro. */
 :root {
   /* Cores — paleta do sertão */
-  --cor-primaria: #d97706;   /* âmbar/terracota */
+  --cor-primaria: #d97706;        /* laranja de destaque: ícones, preços, logo (texto grande) */
   --cor-primaria-escura: #b45309;
-  --cor-acento: #2f9e44;     /* verde da horta */
+  --cor-acao: #b45309;            /* fundo com TEXTO BRANCO (botões/abas/hero) — garante contraste AA */
+  --cor-acao-escura: #8a3d08;     /* hover e fim do degradê */
+  --cor-acento: #2f7d32;          /* verde da horta (mais escuro p/ passar AA com texto branco) */
   --cor-texto: #2b2119;
-  --cor-texto-suave: #6b5d4f;
+  --cor-texto-suave: #5e5143;     /* um tom mais escuro: passa AA inclusive no fundo areia */
   --cor-areia: #faf3e8;
   --cor-areia-escura: #f2e6d2;
   --cor-branco: #ffffff;
 
   /* Tipografia */
-  --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   /* Espaçamento (escala) */
   --espaco-1: .5rem;

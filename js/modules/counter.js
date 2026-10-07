@@ -3,8 +3,17 @@ function iniciarContadores() {
   var numeros = document.querySelectorAll(".stat__number");
   if (!numeros.length) return;
 
+  // Se a pessoa prefere menos movimento, mostra o número final direto
+  var semMovimento =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function animar(el) {
     var alvo = Number(el.dataset.target);
+    if (semMovimento) {
+      el.textContent = alvo.toLocaleString("pt-BR");
+      return;
+    }
     var duracao = 1200;
     var inicio = performance.now();
 
@@ -16,7 +25,6 @@ function iniciarContadores() {
     requestAnimationFrame(passo);
   }
 
-  // Se o navegador não suportar IntersectionObserver, anima tudo direto
   if (!("IntersectionObserver" in window)) {
     numeros.forEach(animar);
     return;
@@ -32,7 +40,7 @@ function iniciarContadores() {
   }, { threshold: 0.2 });
 
   numeros.forEach(function (n) {
-    n.textContent = "0";      // começa do zero para animar
+    if (!semMovimento) n.textContent = "0";
     observador.observe(n);
   });
 }

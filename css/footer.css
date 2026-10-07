@@ -8,6 +8,6 @@
 .footer__text { font-size: .9rem; opacity: .85; margin-top: var(--espaco-1); }
 .footer__links { display: flex; flex-direction: column; gap: .4rem; font-size: .9rem; }
 .footer__links a:hover { color: var(--cor-primaria); }
-.footer__copy { text-align: center; font-size: .8rem; opacity: .6; margin-top: var(--espaco-3); }
+.footer__copy { text-align: center; font-size: .8rem; opacity: .8; margin-top: var(--espaco-3); }
 
 @media (max-width: 760px) { .footer__inner { grid-template-columns: 1fr; } }

@@ -1,5 +1,4 @@
-/* base.css — RESET + TIPOGRAFIA
-   Zera comportamentos padrão do navegador e define a base do texto. */
+/* base.css — RESET + TIPOGRAFIA + BASE DE ACESSIBILIDADE */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -9,6 +8,7 @@ body {
   color: var(--cor-texto);
   background: var(--cor-branco);
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -22,3 +22,49 @@ img { max-width: 100%; display: block; }
   padding-inline: var(--espaco-3);
 }
 .container--narrow { max-width: 720px; }
+
+/* Link "pular para o conteúdo" — fica escondido até receber foco (Tab) */
+.skip-link {
+  position: absolute;
+  left: var(--espaco-2);
+  top: -60px;
+  z-index: 3000;
+  background: var(--cor-acao);
+  color: #fff;
+  padding: .7rem 1.2rem;
+  border-radius: 0 0 10px 10px;
+  font-weight: 700;
+  transition: top .2s;
+}
+.skip-link:focus { top: 0; }
+
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--cor-texto);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.hero :focus-visible,
+.footer :focus-visible,
+.carrossel :focus-visible { outline-color: #fff; }
+
+/* Respeita quem prefere menos movimento na tela */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visível só para leitores de tela */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

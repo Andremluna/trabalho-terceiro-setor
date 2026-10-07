@@ -13,8 +13,8 @@
   transition: transform .15s, background .2s;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn--primary { background: var(--cor-primaria); color: var(--cor-branco); }
-.btn--primary:hover { background: var(--cor-primaria-escura); }
+.btn--primary { background: var(--cor-acao); color: var(--cor-branco); }
+.btn--primary:hover { background: var(--cor-acao-escura); }
 .btn--ghost { background: transparent; color: var(--cor-branco); border-color: var(--cor-branco); }
 .btn--sm { padding: .5rem 1.1rem; font-size: .9rem; }
 .btn--block { display: block; text-align: center; width: 100%; }
@@ -27,7 +27,7 @@
   font-size: .8rem;
   font-weight: 700;
 }
-.badge--light { background: rgba(255,255,255,.2); color: var(--cor-branco); }
+.badge--light { background: #fff; color: var(--cor-acao-escura); }
 .badge--accent { background: var(--cor-acento); color: var(--cor-branco); }
 
 /* --- Card --- */
@@ -53,10 +53,11 @@
     width: fit-content;
     margin: 30px auto 0;
     padding: 12px 20px;
-    background-color: #e8892d;
+    background-color: var(--cor-acao);
     color: white;
     text-decoration: none;
     border-radius: 25px;
+    font-weight: 700;
 }
 
 /* --- Caixa de informações --- */
@@ -72,12 +73,12 @@
     font-size: 12px;
     width: 20px;
     height: 20px;
-    border: 2px solid #e8892d;
+    border: 2px solid var(--cor-acao);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #e8892d;
+    color: var(--cor-acao);
     font-weight: bold;
     font-family: Arial, sans-serif;
     cursor: pointer;
@@ -99,7 +100,9 @@
     transition: 0.2s;
 }
 
-.info-icon:hover + .info-tooltip {
+.info-icon:hover + .info-tooltip,
+.info-icon:focus + .info-tooltip,
+.info-icon:focus-visible + .info-tooltip {
     opacity: 1;
     visibility: visible;
 }

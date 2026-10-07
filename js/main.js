@@ -8,4 +8,5 @@ document.addEventListener("DOMContentLoaded", function () {
   iniciarContadores();
   iniciarDoacao();
   iniciarDepoimentos();
+  iniciarUI();
 });

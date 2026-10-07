@@ -38,6 +38,9 @@
 </head>
 <body>
 
+  <!-- Link para pular direto ao conteúdo (aparece ao navegar por Tab) -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
   <!-- ============ HEADER ============ -->
   <header class="header" id="topo">
     <div class="container header__inner">
@@ -48,7 +51,7 @@
       <!-- Atualizado com aria-expanded para acessibilidade (A11y) -->
       <button class="header__toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">☰</button>
 
-      <nav class="nav" id="nav">
+      <nav class="nav" id="nav" aria-label="Menu principal">
         <a href="#impacto" class="nav__link">Impacto</a>
         <a href="#doar" class="nav__link">Como ajudar</a>
         <a href="#historia" class="nav__link">Histórias</a>
@@ -57,6 +60,9 @@
       </nav>
     </div>
   </header>
+
+  <!-- Conteúdo principal da página -->
+  <main id="conteudo">
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -68,8 +74,8 @@
         Juntos, levamos dignidade e oportunidades onde a água é rara.
       </p>
       <div class="hero__actions">
-        <a href="#doar" class="btn btn--primary pix-trigger"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.2-8.2A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.2 5.8C19 15.7 12 20 12 20z"/></svg>Fazer doação via Pix</a>
-        <a href="#impacto" class="btn btn--ghost">Ver nosso impacto<svg class="icon" viewBox="0 0 24 24"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a href="#doar" class="btn btn--primary pix-trigger"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.2-8.2A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9.2 5.8C19 15.7 12 20 12 20z"/></svg>Fazer doação via Pix</a>
+        <a href="#impacto" class="btn btn--ghost">Ver nosso impacto<svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>
@@ -77,26 +83,26 @@
   <!-- ============ PROVAS DE CONFIANÇA ============ -->
   <section class="trust">
     <div class="container trust__grid">
-      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><strong>100% auditado</strong> Prestação de contas trimestral e pública.</div></div>
-      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg></span><div><strong>Selo Amigo do Sertão</strong> Reconhecidos por transparência e impacto.</div></div>
-      <div class="trust__item"><span class="trust__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12v5M12 9v8M15 14v3"/></svg></span><div><strong>Relatório anual</strong> Balanço social e financeiro aberto.</div></div>
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><strong>100% auditado</strong> Prestação de contas trimestral e pública.</div></div>
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg></span><div><strong>Selo Amigo do Sertão</strong> Reconhecidos por transparência e impacto.</div></div>
+      <div class="trust__item"><span class="trust__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12v5M12 9v8M15 14v3"/></svg></span><div><strong>Relatório anual</strong> Balanço social e financeiro aberto.</div></div>
     </div>
   </section>
 
 <!-- ============ IMAGENS ============ -->
-<div class="carrossel">
-    <button class="carrossel-seta esquerda">&#10094;</button>
+<section class="carrossel" aria-label="Fotos dos projetos no sertão" aria-roledescription="carrossel">
+    <button type="button" class="carrossel-seta esquerda" aria-label="Imagem anterior"><span aria-hidden="true">&#10094;</span></button>
 
     <div class="carrossel-container">
-        <img class="carrossel-img" src="img/Serra.jpg" alt="Aqui estão alguns lugares que receberam este benefício!">
-        <img class="carrossel-img" src="img/cisterna.jpg" alt="Aqui estão alguns lugares que receberam este benefício!">
-        <img class="carrossel-img" src="img/hortas.jpg" alt="Aqui estão alguns lugares que receberam este benefício!">
-        <img class="carrossel-img" src="img/agricultura.webp" alt="Aqui estão alguns lugares que receberam este benefício!">
-        <img class="carrossel-img" src="img/cisterna e horta.webp" alt="Aqui estão alguns lugares que receberam este benefício!">
+        <img class="carrossel-img" src="img/Serra.jpg" alt="Vista da Serra Branca, no sertão de Pernambuco">
+        <img class="carrossel-img" src="img/cisterna.jpg" alt="Cisterna de captação de água instalada no quintal de uma família">
+        <img class="carrossel-img" src="img/hortas.jpg" alt="Horta comunitária cultivada pelas famílias do projeto">
+        <img class="carrossel-img" src="img/agricultura.webp" alt="Agricultores familiares trabalhando na plantação">
+        <img class="carrossel-img" src="img/cisterna e horta.webp" alt="Cisterna instalada ao lado de uma horta comunitária">
     </div>
 
-    <button class="carrossel-seta direita">&#10095;</button>
-</div>
+    <button type="button" class="carrossel-seta direita" aria-label="Próxima imagem"><span aria-hidden="true">&#10095;</span></button>
+</section>
 
   <!-- ============ IMPACTO ============ -->
   <section class="section" id="impacto">
@@ -106,22 +112,22 @@
 
       <div class="stats">
         <article class="stat">
-          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 10a6 6 0 0 1-12 0c0-3 3-6 6-10z"/></svg></span>
+          <span class="stat__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 10a6 6 0 0 1-12 0c0-3 3-6 6-10z"/></svg></span>
           <span class="stat__number" data-target="180">180</span>
           <span class="stat__label">Cisternas instaladas — água potável para 600 famílias</span>
         </article>
         <article class="stat">
-          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-3 2.2-5.2 5.2-5.2C17.2 9.8 15 12 12 12z"/><path d="M12 14.5C12 12 9.8 10 6.8 10 6.8 12.5 9 14.5 12 14.5z"/></svg></span>
+          <span class="stat__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-3 2.2-5.2 5.2-5.2C17.2 9.8 15 12 12 12z"/><path d="M12 14.5C12 12 9.8 10 6.8 10 6.8 12.5 9 14.5 12 14.5z"/></svg></span>
           <span class="stat__number" data-target="90">90</span>
           <span class="stat__label">Mulheres agricultoras em hortas comunitárias</span>
         </article>
         <article class="stat">
-          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4L2 9z"/><path d="M6 11v4c0 1.3 2.7 2.3 6 2.3s6-1 6-2.3v-4"/></svg></span>
+          <span class="stat__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4L2 9z"/><path d="M6 11v4c0 1.3 2.7 2.3 6 2.3s6-1 6-2.3v-4"/></svg></span>
           <span class="stat__number" data-target="400">400</span>
           <span class="stat__label">Jovens capacitados no Centro Sertão Digital</span>
         </article>
         <article class="stat">
-          <span class="stat__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z"/></svg></span>
+          <span class="stat__icon"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z"/></svg></span>
           <span class="stat__number" data-target="1200">1.200</span>
           <span class="stat__label">Filtros ecológicos de barro distribuídos</span>
         </article>
@@ -140,16 +146,16 @@
       <h2 class="section__title">Escolha como ajudar</h2>
       <p class="section__lead">Cada valor tem um impacto direto e mensurável.</p>
 
-      <div class="tabs" id="donationTabs">
-        <button class="tabs__btn is-active" data-tab="mensal">Doação mensal</button>
-        <button class="tabs__btn" data-tab="pontual">Doação única</button>
+      <div class="tabs" id="donationTabs" role="tablist" aria-label="Tipo de doação">
+        <button type="button" class="tabs__btn is-active" data-tab="mensal" role="tab" id="tab-mensal" aria-selected="true" aria-controls="painel-mensal">Doação mensal</button>
+        <button type="button" class="tabs__btn" data-tab="pontual" role="tab" id="tab-pontual" aria-selected="false" aria-controls="painel-pontual" tabindex="-1">Doação única</button>
       </div>
 
       <div class="doacao-info">
 
-    <span class="info-icon">i</span>
+    <span class="info-icon" tabindex="0" role="button" aria-describedby="doacao-tooltip" aria-label="Para que serve a sua doação">i</span>
 
-    <div class="info-tooltip">
+    <div class="info-tooltip" id="doacao-tooltip" role="tooltip">
         As doações ajudam a manter os projetos do Instituto Sertão Vivo,
         contribuindo para ações voltadas ao acesso à água, hortas comunitárias
         e desenvolvimento da comunidade. Com sua ajuda podemos continuar
@@ -159,41 +165,41 @@
 </div>
 
       <!-- Painel: Mensal -->
-      <div class="cards" data-panel="mensal">
+      <div class="cards" data-panel="mensal" role="tabpanel" id="painel-mensal" aria-labelledby="tab-mensal" tabindex="0">
         <article class="card">
           <span class="card__price">R$ 30<small>/mês</small></span>
           <p class="card__text">Água limpa e filtro para 1 família por mês.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Apoiar com R$ 30 por mês">Apoiar</a>
         </article>
         <article class="card card--featured">
           <span class="badge badge--accent">Mais escolhido</span>
           <span class="card__price">R$ 60<small>/mês</small></span>
           <p class="card__text">Alimento e material escolar para 2 crianças.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Apoiar com R$ 60 por mês">Apoiar</a>
         </article>
         <article class="card">
           <span class="card__price">R$ 100<small>/mês</small></span>
           <p class="card__text">Insumos para a horta comunitária das mulheres.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Apoiar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Apoiar com R$ 100 por mês">Apoiar</a>
         </article>
       </div>
 
       <!-- Painel: Pontual (oculto por padrão) -->
-      <div class="cards is-hidden" data-panel="pontual">
+      <div class="cards is-hidden" data-panel="pontual" role="tabpanel" id="painel-pontual" aria-labelledby="tab-pontual" tabindex="0">
         <article class="card">
           <span class="card__price">R$ 50</span>
           <p class="card__text">1 cesta básica da agricultura familiar local.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Doar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Doar R$ 50 uma vez">Doar</a>
         </article>
         <article class="card">
           <span class="card__price">R$ 250</span>
           <p class="card__text">Manutenção completa de uma cisterna comunitária.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Doar</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Doar R$ 250 uma vez">Doar</a>
         </article>
         <article class="card">
           <span class="card__price">Outro</span>
           <p class="card__text">Escolha quanto deseja doar hoje.</p>
-          <a href="#" class="btn btn--primary btn--block pix-trigger">Escolher valor</a>
+          <a href="#" class="btn btn--primary btn--block pix-trigger" aria-label="Escolher outro valor para doar">Escolher valor</a>
         </article>
       </div>
     </div>
@@ -212,16 +218,16 @@
     </blockquote>
     </div>
   </section> -->
-  <section class="depoimentos" id="historia">
-    <button class="seta esquerda" id="btnAnterior" aria-label="Depoimento anterior">
-        &#10094;
+  <section class="depoimentos" id="historia" aria-label="Depoimentos de moradores">
+    <button type="button" class="seta esquerda" id="btnAnterior" aria-label="Depoimento anterior">
+        <span aria-hidden="true">&#10094;</span>
     </button>
-    <div class="depoimento">
+    <div class="depoimento" aria-live="polite">
         <p id="fala"></p>
         <h4 id="autor"></h4>
     </div>
-    <button class="seta direita" id="btnProximo" aria-label="Próximo depoimento">
-        &#10095;
+    <button type="button" class="seta direita" id="btnProximo" aria-label="Próximo depoimento">
+        <span aria-hidden="true">&#10095;</span>
     </button>
 </section>
 
@@ -248,11 +254,15 @@
       <h2 class="section__title">Receba nosso boletim de impacto</h2>
       <p class="section__lead">Acompanhe mensalmente as novidades e o desenvolvimento da sede em Serra Branca diretamente no seu e-mail.</p>
       <form id="newsletterForm" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
-        <input type="email" placeholder="Seu melhor e-mail" required style="padding: 12px 16px; border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 260px; max-width: 400px;" />
+        <label class="sr-only" for="newsletterEmail">Seu e-mail para receber o boletim</label>
+        <input id="newsletterEmail" name="email" type="email" placeholder="Seu melhor e-mail" required autocomplete="email" aria-describedby="newsletterStatus" style="padding: 12px 16px; border: 1px solid #767676; border-radius: 4px; flex: 1; min-width: 260px; max-width: 400px;" />
         <button type="submit" class="btn btn--primary">Inscrever-se</button>
       </form>
+      <p id="newsletterStatus" role="status" aria-live="polite" style="margin-top: 12px; min-height: 1.2em; font-weight: 600; color: var(--cor-acento);"></p>
     </div>
   </section>
+
+  </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
@@ -262,8 +272,8 @@
         <p class="footer__text">Comunidade de Serra Branca, sertão de Pernambuco (PE)</p>
       </div>
       <div class="footer__contact">
-        <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contato@sertaovivo.org.br</span>
-        <span class="footer__contact-item"><svg class="icon" viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.5-2.2 1.4a12 12 0 0 0 5 5l1.4-2.2L19 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>WhatsApp (81) 99999-0000</span>
+        <span class="footer__contact-item"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contato@sertaovivo.org.br</span>
+        <span class="footer__contact-item"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.5-2.2 1.4a12 12 0 0 0 5 5l1.4-2.2L19 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>WhatsApp (81) 99999-0000</span>
       </div>
       <nav class="footer__links">
         <a href="#">Privacidade</a>
@@ -275,15 +285,15 @@
   </footer>
 
   <!-- ============ NOVO: BOTÃO FLUTUANTE VOLTAR AO TOPO ============ -->
-  <a href="#topo" id="backToTop" aria-label="Voltar ao topo" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: var(--color-primary, #0077cc); color: #fff; padding: 10px 14px; border-radius: 50%; text-decoration: none; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">↑</a>
+  <a href="#topo" id="backToTop" aria-label="Voltar ao topo" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: var(--cor-acao); color: #fff; padding: 10px 14px; border-radius: 50%; text-decoration: none; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">↑</a>
 
   <!-- ============ NOVO: MODAL PIX (POPUP) ============ -->
-  <div id="pixModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center;">
+  <div id="pixModal" role="dialog" aria-modal="true" aria-labelledby="pixModalTitulo" aria-hidden="true" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center;">
     <div style="background: #fff; padding: 30px; border-radius: 8px; max-width: 400px; width: 90%; text-align: center; position: relative;">
-      <h3 style="margin-bottom: 15px;">Doação via Pix — Sertão Vivo</h3>
+      <h3 id="pixModalTitulo" style="margin-bottom: 15px;">Doação via Pix — Sertão Vivo</h3>
       <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Utilize a chave Pix abaixo (CNPJ fictício) ou escaneie no aplicativo do seu banco:</p>
       <div style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-weight: bold; margin-bottom: 20px; font-size: 14px;">12.345.678/0001-99</div>
-      <button id="closePixModal" class="btn btn--primary" style="padding: 8px 16px;">Fechar</button>
+      <button type="button" id="closePixModal" class="btn btn--primary" style="padding: 8px 16px;" aria-label="Fechar janela de doação via Pix">Fechar</button>
     </div>
   </div>
 
@@ -293,7 +303,20 @@
   <script src="js/modules/counter.js"></script>
   <script src="js/modules/donation.js"></script>
   <script src="js/modules/message.js"></script>
+  <script src="js/modules/ui.js"></script>
   <script src="js/main.js"></script>
   <script src="js/imagens.js"></script>
+
+  <!-- ============ VLibras — tradução para Libras (acessibilidade) ============ -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
 </body>
 </html>

@@ -4,13 +4,19 @@ function iniciarMenu() {
   var nav = document.getElementById("nav");
   if (!botao || !nav) return;
 
+  function definirEstado(aberto) {
+    nav.classList.toggle("is-open", aberto);
+    botao.setAttribute("aria-expanded", aberto ? "true" : "false");
+    botao.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+  }
+
   botao.addEventListener("click", function () {
-    nav.classList.toggle("is-open");
+    definirEstado(!nav.classList.contains("is-open"));
   });
 
   nav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
-      nav.classList.remove("is-open");
+      definirEstado(false);
     });
   });
 }

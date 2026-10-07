@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nosso Impacto</title>
+    <title>Nosso Impacto — Instituto Sertão Vivo</title>
+    <meta name="description" content="Resultados do Instituto Sertão Vivo em Serra Branca (PE): cisternas, hortas comunitárias e atendimento às famílias do sertão." />
 
     <style>
         body {
@@ -41,7 +42,7 @@
         .linha {
             width: 60px;
             height: 4px;
-            background-color: #e8892d;
+            background-color: #b45309;
             margin: 0 auto 20px;
         }
 
@@ -62,12 +63,12 @@
             padding: 20px;
             width: 180px;
             text-align: center;
-            border-top: 4px solid #e8892d;
+            border-top: 4px solid #b45309;
             border-radius: 8px;
         }
 
         .resultado h2 {
-            color: #e8892d;
+            color: #b45309;
             font-size: 30px;
             margin: 0;
         }
@@ -76,7 +77,7 @@
             background-color: white;
             padding: 20px;
             margin-top: 25px;
-            border-left: 4px solid #e8892d;
+            border-left: 4px solid #b45309;
             border-radius: 8px;
         }
 
@@ -89,11 +90,31 @@
             width: fit-content;
             margin: 40px auto;
             padding: 12px 20px;
-            background-color: #e8892d;
+            background-color: #b45309;
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #2b2119;
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: -60px;
+            background: #b45309;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 0 0 10px 10px;
+            font-weight: bold;
+            z-index: 1000;
+            transition: top .2s;
+        }
+        .skip-link:focus { top: 0; }
 
         footer {
             background-color: white;
@@ -107,11 +128,13 @@
 
 <body>
 
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
     <header>
         <a href="index.html">Instituto Sertão Vivo</a>
     </header>
 
-    <main>
+    <main id="conteudo">
 
         <h1>Nosso Impacto</h1>
 
@@ -175,6 +198,18 @@
         <p>Projeto acadêmico</p>
 
     </footer>
+
+    <!-- VLibras — tradução para Libras (acessibilidade) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
 
 </body>
 

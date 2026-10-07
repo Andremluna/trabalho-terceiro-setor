@@ -25,11 +25,11 @@
 /* Doação — abas + cards */
 .tabs { display: flex; justify-content: center; gap: var(--espaco-1); margin-bottom: var(--espaco-4); }
 .tabs__btn {
-  padding: .6rem 1.4rem; border: 2px solid var(--cor-primaria);
-  background: transparent; color: var(--cor-primaria);
+  padding: .6rem 1.4rem; border: 2px solid var(--cor-acao);
+  background: transparent; color: var(--cor-acao);
   border-radius: 999px; font-weight: 700; cursor: pointer;
 }
-.tabs__btn.is-active { background: var(--cor-primaria); color: #fff; }
+.tabs__btn.is-active { background: var(--cor-acao); color: #fff; }
 
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--espaco-3); }
 .cards.is-hidden { display: none; }
@@ -56,10 +56,10 @@
 .seta {
   flex-shrink: 0; width: 45px; height: 45px;
   border: none; border-radius: 50%;
-  background: var(--cor-primaria); color: var(--cor-branco);
+  background: var(--cor-acao); color: var(--cor-branco);
   font-size: 1.2rem; cursor: pointer; transition: background .2s;
 }
-.seta:hover { background: var(--cor-primaria-escura); }
+.seta:hover { background: var(--cor-acao-escura); }
 .seta:focus-visible { outline: 3px solid var(--cor-texto); outline-offset: 2px; }
 
 /* FAQ */
